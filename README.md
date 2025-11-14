@@ -14,14 +14,6 @@ Rick & Morty API).
 4. All endpoints should be documented via Swagger.
 
 ### How to run:
-- Create venv: 'python3 -m venv venv'
-- Activate venv: 'source venv/bin/activate'
-- Install requirements: 'pip install -r requirements.txt'
-- Create new Postgres DB & User
-- Copy .env.sample -> .env and populate
-- Run Django migrations: 'python manage.py migrate'
-- Run Redis server: 'docker run -d -p 6379:6379 redis'
-- Run Celery worker for tasks handling: 'celery -A rick_and_morty_api worker -l INFO'
-- Run Celery beat for task scheduling: 'celery -A rick_and_morty_api beat -l INFO --schedule'
-- Create scheduled for running sync in DB
-- Run Django server: 'python manage.py runserver'
+- Copy .env.sample -> .env and populate with required data 
+- 'docker-compose up --build'
+- Create admin user & create scheduled for running sync in DB
